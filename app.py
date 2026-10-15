@@ -3,7 +3,7 @@ import base64
 import streamlit as st
 
 st.set_page_config(
-    page_title="Aemchira | ผลงานวิชา Graph Database",
+    page_title="Aemchira | ผลงานวิชาระบบฐานข้อมูลขั้นสูง",
     page_icon="🕸️",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -236,7 +236,7 @@ PAGE = f"""
 <div class="pf">
   <section class="hero">
     <div>
-      <span class="pill">วิชา Graph Database</span>
+      <span class="pill">วิชา ระบบฐานข้อมูลขั้นสูง (7142202)</span>
       <h1>ผลงานของ<br><span>เอมจิรา</span></h1>
       <p class="lead">การบ้าน 4 ชิ้นและโปรเจกต์ DrinkGraph ที่ทำตลอดวิชา รวมไว้ที่เดียว กดตัวเลขในกราฟเพื่อข้ามไปดูแต่ละชิ้นได้</p>
       <ul class="who">
