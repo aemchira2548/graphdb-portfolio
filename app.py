@@ -172,7 +172,14 @@ CSS = """
 
 
 def btn(label, href, kind="", download=False):
-    extra = " download" if download else ""
+    if download:
+        extra = " download"
+    elif href.startswith("http"):
+        # Streamlit Cloud serves apps inside an iframe; external sites (Colab, GitHub) refuse
+        # to load there, so they must open in a new tab.
+        extra = ' target="_blank" rel="noopener noreferrer"'
+    else:
+        extra = ""
     return f'<a class="btn {kind}" href="{href}"{extra}>{label}</a>'
 
 
