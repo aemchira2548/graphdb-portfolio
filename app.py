@@ -240,7 +240,7 @@ PAGE = f"""
       <h1>ผลงานของ<br><span>เอมจิรา</span></h1>
       <p class="lead">การบ้าน 4 ชิ้นและโปรเจกต์ DrinkGraph ที่ทำตลอดวิชา รวมไว้ที่เดียว กดตัวเลขในกราฟเพื่อข้ามไปดูแต่ละชิ้นได้</p>
       <ul class="who">
-        <li>Aemchira Ouamcharoen รหัส 051</li>
+        <li>Aemchira Ouamcharoen รหัส 664245051</li>
         <li>วิทยาการคอมพิวเตอร์ ปี 4 ม.ราชภัฏนครปฐม</li>
       </ul>
       <div class="cta">{btn('ดูผลงานทั้งหมด', '#works', 'main')}{btn('ลองใช้ DrinkGraph', APP_URL)}</div>
