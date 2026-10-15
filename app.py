@@ -171,8 +171,11 @@ CSS = """
 """
 
 
-def btn(label, href, kind="", download=False):
-    if download:
+def btn(label, href, kind="", download=False, view=False):
+    if view:
+        # local PDF: open it in a new tab instead of downloading
+        extra = ' target="_blank" rel="noopener noreferrer"'
+    elif download:
         extra = " download"
     elif href.startswith("http"):
         # Streamlit Cloud serves apps inside an iframe; external sites (Colab, GitHub) refuse
@@ -198,7 +201,7 @@ CARDS = "".join(
             "ออกแบบกราฟระบบแนะนำชมรม",
             "กำหนด Node (Student, Club, Interest) และ Relationship "
             "(FRIEND_OF, MEMBER_OF, INTERESTED_IN, FOCUSES_ON) พร้อมข้อมูลตัวอย่างและคำสั่ง Cypher",
-            btn("ดาวน์โหลด PDF", PDF_HW2, "main", download=True),
+            btn("เปิดดู PDF", PDF_HW2, "main", view=True),
         ),
         card(3, "การบ้านชิ้นที่ 3", "สมุดงานบน Google Colab", btn("เปิดใน Colab", COLAB_3, "main")),
         card(4, "การบ้านชิ้นที่ 4", "สมุดงานบน Google Colab", btn("เปิดใน Colab", COLAB_4, "main")),
@@ -212,7 +215,7 @@ PROJECT = (
     "<p class='sub'>ดูว่าคนที่ชอบเหมือนคุณดื่มอะไร แล้วเลือกแก้วถัดไปอย่างมีเหตุผล</p>"
     f"<div class='acts'>{btn('ลองใช้งานเว็บแอป', APP_URL, 'gold')}"
     f"{btn('ดูโค้ดบน GitHub', REPO_URL)}"
-    f"{btn('สไลด์ PDF', PDF_DG, download=True)}"
+    f"{btn('สไลด์ PDF', PDF_DG, view=True)}"
     f"{btn('สไลด์ PowerPoint', PPTX_DG, download=True)}</div></div></article>"
 )
 
